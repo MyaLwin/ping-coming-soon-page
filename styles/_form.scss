@@ -1,0 +1,76 @@
+form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 25px;
+    text-align: left;
+    width: 90%;
+    #form-input {
+        flex: 0.7;
+    }
+    input {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 15px;
+        border: 1px solid $paleBlue;
+        border-radius: 25px;
+        height: 50px;
+        outline: none;
+        font-size: 16px;
+        &::placeholder {
+            color: $paleBlue;
+        }
+        
+    }   
+
+    #form-input.error input {
+        border-color: $lightRed;
+        color: $veryDarkBlue;
+        font-weight: 300;
+    }
+
+    small {
+        color: $lightRed;
+        font-style: italic;
+        z-index: 100;
+        margin: 0 20px 40px;
+    }
+    button {
+        background-color: $blue;
+        border: none;
+        box-shadow: 2px 5px 5px hsla(223, 87%, 63%, .2);
+        color: #ffffff;
+        flex: 0.3;
+        border-radius: 25px;
+        height: 50px;
+        outline: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 20px;
+        padding: 15px 0;
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+            flex-direction: column;
+            text-align: center;
+            #form-input {
+                width: 100%;
+                input {
+                    padding-left: 30px;
+                }
+            }
+
+            #form-input.error input {
+                margin-bottom: 5px;
+            }
+           
+            button {
+                margin-left: 0;
+                margin-top: 25px;
+                width: 100%;
+            }
+    }
+}

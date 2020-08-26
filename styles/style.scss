@@ -1,0 +1,93 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import './form';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 650px;
+    margin: 50px auto;
+    h1 {
+        font-weight: 300;
+        font-size: 48px;
+        color: $gray;
+        margin-top: 48px;
+        margin-bottom: 0;
+        strong {
+            color: $veryDarkBlue;
+        }
+    }
+    p {
+        font-size: 20px;
+        color: $veryDarkBlue;
+    }
+
+    .dashboard {
+        margin-top: 85px;
+        margin-bottom: 50px;
+        max-width: 100%;
+    }
+    
+    @media screen and (max-width: 375px) {
+        text-align: center;
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .dashboard {
+            width: 95%;
+            margin-top: 50px;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: $gray;
+    a {
+        text-decoration: none;
+        color: $gray;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 20px auto;
+        li {
+            list-style-type: none;
+            a {
+                display: inline-flex;
+                width: 30px;
+                height: 30px;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $paleBlue;
+                padding: none;
+                margin: 5px;
+                border-radius: 50%;
+                color: $blue;
+                &:hover {
+                    background-color: $blue;
+                    color: #fff;
+                }
+            }
+        }
+        
+    }
+    
+    
+}
